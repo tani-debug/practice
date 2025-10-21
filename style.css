@@ -1,0 +1,77 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: rgb(218, 241, 255);
+    color: rgb(0, 53, 83);
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    
+    
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* centers items horizontally */
+    align-items: center;     /* centers vertically */
+    list-style: none;        /* removes bullets */
+    gap: 40px;               /* space between items */
+    height: 60px;            /* navbar height */
+    font-weight: bolder;
+    font-size: xx-large;
+    margin: 0;               /* remove default ul margin */
+    padding: 0;              /* remove default ul padding */
+    font-weight: 500;
+    font-style: normal;    
+}   
+
+.smooth-underline {
+    position: relative; /*essential to postition the ::after element*/
+    color: white;
+    text-decoration: none;
+    padding-bottom: 2px;
+}
+/* creates the initial hidden underline */
+.smooth-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom:0;
+    left: 0;
+    background-color: white;
+
+    transform: scaleX(0);
+    transition: transform 0.2s ease-out;
+
+    transform-origin: bottom center;
+}
+
+.smooth-underline:hover::after {
+    transform: scaleX(1);
+}
+
+.container {
+    background: rgb(0, 78, 122);
+    color: white;
+    padding: 12px;
+}
+
+.content {
+    display: flex;
+    display: block;
+    justify-items: center;
+    margin: 20px;
+}
+
+.value {
+    font-weight: 400;
+    font-size: larger;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
